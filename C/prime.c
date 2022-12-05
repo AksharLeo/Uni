@@ -14,11 +14,11 @@ void main(){
     int n,i=2,flag=1;
     scanf("%d",&n);
     while(i<n){
-        if (n%2==0){
+        if (n%i==0){
             flag=0;
             break;
         }
-    i++;
+        i++;
     }
     if (flag==1){
         printf("Prime");

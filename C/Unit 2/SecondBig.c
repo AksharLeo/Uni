@@ -17,28 +17,25 @@ output=-10
 
 void main()
 {
-    int n,i,biggest,secondBig;
+    int n,i,j,temp;
     scanf("%d",&n);
     int a[n];
+
     for(i=0;i<n;++i)
     {
         scanf("%d",&a[i]);
     }
-    biggest=a[0];
     for(i=0;i<n;++i)
     {
-        if(a[i]>biggest)
+        for(j=i+1;j<n;++j)
         {
-            biggest=a[i];
+            if(a[j]<a[i])
+            {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
         }
     }
-    secondBig=a[0];
-    for(i=0;i<n;++i)
-    {
-        if((a[i]<biggest)&&(a[i]>secondBig))
-        {
-            secondBig=a[i];
-        }
-    }
-    printf("%d",secondBig);
+    printf("%d ",a[n-2]);
 }

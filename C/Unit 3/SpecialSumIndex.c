@@ -49,7 +49,7 @@ int specialSumIndex(int *arr,int n)
         int counter = 2;
         int sum = arr[i];
         int j = i+1;
-        while(n - j >= counter)
+        while(counter < n - j)
         {
             int m = j + counter;
             for(j; j < m; j++)
